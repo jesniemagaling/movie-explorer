@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <!-- Header -->
+    <header
+      class="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 sticky top-0 z-50 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between flex-col gap-6 md:flex-row"
+      >
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
+          🎬 Movie Explorer
+        </h1>
+        <div class="flex items-center space-x-2">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search movies..."
+            class="w-60 md:w-80 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-full bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+          <button
+            id="searchBtn"
+            class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-full transition"
+          >
+            Search
+          </button>
+          <button
+            id="toggleDark"
+            class="text-sm px-3 py-2 rounded-full border border-gray-300 dark:border-gray-600 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            🌙
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Results -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+      <div
+        id="results"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!-- Movie cards will go here -->
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="movieModal"
+      class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center hidden z-50"
+    >
+      <div
+        class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white w-full max-w-2xl rounded-xl shadow-lg p-6 relative"
+      >
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-white text-2xl"
+        >
+          &times;
+        </button>
+        <div id="modalContent" class="space-y-4">
+          <!-- Dynamic modal content -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-6 px-4">
+      <!-- Poster -->
+      <img
+        src="https://via.placeholder.com/300x450"
+        alt="Movie Poster"
+        class="w-full md:w-1/3 rounded-lg object-cover"
+      />
+
+      <!-- Movie Info -->
+      <div class="flex-1 space-y-2">
+        <h2 class="text-2xl font-bold">Movie Title (2024)</h2>
+        <p class="text-sm text-gray-400">Genre: Action, Thriller</p>
+        <p class="text-sm text-gray-400">Rated: PG-13</p>
+        <p class="text-sm text-gray-400">Runtime: 2h 14m</p>
+        <p class="text-sm text-gray-400">Director: John Doe</p>
+        <p class="text-sm text-gray-400">Cast: Actor 1, Actor 2, Actor 3</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          A short plot summary goes here. This will explain the movie briefly so
+          users get a quick idea of what it’s about.
+        </p>
+        <a
+          href="https://www.imdb.com/title/tt1234567/"
+          target="_blank"
+          class="inline-block text-sm text-yellow-400 hover:underline mt-2"
+          >🔗 View on IMDb</a
+        >
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="text-center text-sm text-gray-500 dark:text-gray-400 py-6 border-t border-gray-200 dark:border-gray-700 mt-10"
+    >
+      &copy; 2025 Movie Explorer. Built with 💛 and JavaScript.
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
