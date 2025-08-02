@@ -22,7 +22,7 @@ toggleDarkBtn.addEventListener('click', () => {
   setTimeout(() => {
     darkModeIcon.innerHTML = isDark ? sunSVG : moonSVG;
     darkModeIcon.classList.remove('opacity-0');
-  }, 200);
+  }, 100);
 });
 
 const API_KEY = 'cc68bbe0';
@@ -135,7 +135,7 @@ async function searchMovies() {
 
     if (data.Response === 'True') {
       resultsContainer.innerHTML = data.Search.map(renderMovieCard).join('');
-      attachMovieCardListeners();
+      movieCardListeners();
     } else {
       resultsContainer.innerHTML =
         '<p class="text-gray-400">No results found</p>';
@@ -148,7 +148,7 @@ async function searchMovies() {
 }
 
 // Add click event to each movie card to open modal with details
-function attachMovieCardListeners() {
+function movieCardListeners() {
   const cards = resultsContainer.querySelectorAll('[data-imdbid]');
   cards.forEach((card) => {
     card.addEventListener('click', () => {
