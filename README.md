@@ -1,4 +1,4 @@
-# 📽Movie Explorer
+# Movie Explorer
 
 **Movie Explorer** is a simple web app that lets users search for movies using the **IMDb API**.  
 It was built as a learning project to explore how to fetch and display data from external APIs using vanilla JavaScript.
@@ -54,3 +54,6 @@ git clone https://github.com/jesniemagaling/movie-explorer.git
 
 # Go into the project folder
 cd movie-explorer
+
+# Start the server
+npm run dev
