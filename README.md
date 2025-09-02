@@ -1,42 +1,38 @@
-# Qveeco E-commerce
+# Movie Explorer
 
-**Qveeco** is an e-commerce web app built using **Vanilla JavaScript** and **Tailwind CSS**.  
-It was created as a follow-up learning project after understanding core JavaScript concepts, focusing on DOM manipulation, Local Storage, UI responsiveness, and building interactive features without frameworks.
+**Movie Explorer** is a simple web app that lets users search for movies using the **IMDb API**.  
+It was built as a learning project to explore how to fetch and display data from external APIs using vanilla JavaScript.
 
 ---
 
 ## Overview
 
-This project was built to deepen knowledge in frontend development using plain JavaScript and utility-first CSS.  
-With Qveeco, users can:
+This project was created while learning how APIs work in frontend development.  
+With Movie Explorer, users can:
 
-1. Browse a list of products  
-2. Add or remove items from the cart  
-3. View total cost and item count in real time  
-4. Interact with a responsive, modern UI
+1. Type a movie title into the search bar  
+2. Fetch movie results using the IMDb API  
+3. View key details like title, year, and poster
 
-It's a hands-on, beginner-to-intermediate project that simulates core e-commerce functionality in a clean, minimal way.
+It's a lightweight, beginner-friendly project aimed at understanding how to make API calls, work with JSON data, and dynamically update the DOM.
 
 ---
 
 ## Key Features
 
-- Product listing with image, title, and price
-- Advance filtering products
-- Add to Cart / Remove from Cart functionality
-- Real-time cart item count and total price
-- Responsive layout using Tailwind CSS
-- Modular code using Vanilla JS
-- Built with Vite for fast development and bundling
+- Real-time movie search using the IMDb API
+- Displays title, poster, and release year
+- Simple UI built with HTML, CSS, and JavaScript
+- No frameworks or libraries – just plain JS for learning
 
 ---
 
 ## Tech Stack
 
 - **HTML** – Page structure  
-- **Tailwind CSS** – Utility-first styling for responsive design  
-- **JavaScript (Vanilla)** – Core logic and interactivity  
-- **Vite** – Lightning-fast frontend tooling
+- **CSS** – Basic styling  
+- **JavaScript (Vanilla)** – API interaction and DOM manipulation  
+- **IMDb API** – Movie data source  
 
 ---
 
@@ -44,9 +40,9 @@ It's a hands-on, beginner-to-intermediate project that simulates core e-commerce
 
 ### Prerequisites
 
-- Node.js v16 or later  
-- npm or yarn  
-- Code editor (VS Code recommended)
+- Web browser (Chrome, Firefox, etc.)
+- Text editor (VS Code recommended)
+- IMDb API key (get one from [RapidAPI IMDb](https://rapidapi.com/apidojo/api/imdb8/))
 
 ---
 
@@ -54,13 +50,10 @@ It's a hands-on, beginner-to-intermediate project that simulates core e-commerce
 
 ```bash
 # Clone this repository
-git clone https://github.com/jesniemagaling/qveeco-ecommerce.git
+git clone https://github.com/jesniemagaling/movie-explorer.git
 
 # Go into the project folder
-cd qveeco-ecommerce
+cd movie-explorer
 
-# Install dependencies
-npm install
-
-# Start the development server
+# Start the server
 npm run dev
